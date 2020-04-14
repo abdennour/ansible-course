@@ -1,0 +1,19 @@
+event: DevOps Days
+date: 2018-12-03 10:00GMT+3
+location:
+    building: IT Stars
+    address:
+        lines: |
+            7173 Floor 2
+            Street Randa
+        city: Tunis
+        postal: 12233
+# List of topics
+topics:
+    - name: Reliability in IT
+      minutes: 20
+      speaker: Abdennour Toumi
+    - name: K8S Hands-on
+      minutes: 40
+      speaker: Firas Abid
+
