@@ -1,0 +1,19 @@
+- name: Play 1 - App Deployment
+  hosts: all
+  tasks:
+  - name: directory exist
+    file:
+      path: /tomcat/webapps
+      state: directory
+  - name: file is copied
+    copy:
+      src: target/app.war
+      dest: /tomcat/webapps/app.war
+- name: Play 2 - DB Deployment
+  hosts: db
+  tasks:
+  - name: DB engine is installed
+    service:
+      name: mysql
+      state: latest
+
