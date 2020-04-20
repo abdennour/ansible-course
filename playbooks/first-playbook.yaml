@@ -1,0 +1,19 @@
+- name: play for file management
+  hosts: ec2
+  tasks:
+    # create file `/tmp/hello.txt` with some content
+  - name: hello file is copied
+    copy:
+      content: "Hello here"
+      dest: /tmp/hello.txt
+  - name: hi file is copied
+    copy:
+      content: "Hi here"
+      dest: /tmp/hi.txt
+  - name: archive hh is created
+    archive:
+      path:
+      - /tmp/hello.txt
+      - /tmp/hi.txt
+      dest: /tmp/hh.zip
+      format: zip
