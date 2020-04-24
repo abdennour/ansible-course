@@ -1,20 +1,23 @@
 - hosts: ec2
   become: yes
+  vars:
+    webserver: nginx
+    webserver_root_dir: /var/www/html
   tasks:
   - name: webserver is installed
     package:
-      name: nginx
+      name: "{{ webserver }}"
       state: present
   - name: webserver is up
     service:
-      name: nginx
+      name: "{{ webserver }}"
       state: started
 
   - name: webserver root directory exists
     file:
-      path: /var/www/html
+      path: "{{ webserver_root_dir }}"
       state: directory
   - name: static website is deployed
     uri:
       url: https://raw.githubusercontent.com/abdennour/example-static-website/ansible-course/index.html
-      dest: /var/www/html # /usr/share/nginx/html
+      dest: "{{ webserver_root_dir }}" # /usr/share/nginx/html

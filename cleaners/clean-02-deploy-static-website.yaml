@@ -1,0 +1,15 @@
+- hosts: ec2
+  become: yes
+  tasks:
+  - name: webserver is down
+    service:
+      name: nginx
+      state: stopped
+  - name: webserver is removed
+    package:
+      name: nginx
+      state: absent
+  - name: webserver root dir is absent
+    file:
+      path: /var/www/html
+      state: absent

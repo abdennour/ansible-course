@@ -1,0 +1,11 @@
+- name: play for file management
+  hosts: ec2
+  tasks:
+  - name: all files are deleted
+    file:
+      path: "{{ item }}"
+      state: absent
+    loop:
+    - /tmp/hello.txt
+    - /tmp/hi.txt
+    - /tmp/hh.zip
