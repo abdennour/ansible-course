@@ -1,0 +1,7 @@
+- name: play for turn-off gather facts task
+  hosts: ec2
+  gather_facts: no
+  tasks:
+  - name: print ansible_facts
+    debug:
+      var: ansible_facts

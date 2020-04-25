@@ -1,0 +1,13 @@
+- hosts: ec2
+  become: yes
+  vars:
+    webserver:
+      type: nginx
+      root_dir: /var/www/html
+    # webserver_type: nginx
+    # webserver_root_dir: /var/www/html
+  tasks:
+  - name: debug
+    debug:
+      msg: "the value of webserver is {{ webserver['type'] }} .. dir {{ webserver.root_dir }}"
+

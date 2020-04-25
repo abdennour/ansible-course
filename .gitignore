@@ -1,3 +1,4 @@
 ansibleuser*
 *.py
 _.yaml
+*assign*

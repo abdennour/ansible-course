@@ -1,0 +1,6 @@
+- name: play for discover magic variables
+  hosts: ec2
+  gather_facts: no 
+  tasks:
+  - name: print inventory_hostname
+  - name: print hostvars

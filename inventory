@@ -1,3 +1,3 @@
-ec2 ansible_host=52.15.207.99 ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser webserver=tomcat
+ec2 ansible_host=18.222.140.103 ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser webserver=tomcat
 # ssh -i ansibleuser ansibleuser@localhost -p 2525
 container ansible_host=localhost ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser ansible_ssh_port=2525
