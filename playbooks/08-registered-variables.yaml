@@ -1,0 +1,17 @@
+- hosts: ec2
+  become: yes
+  tasks:
+  - name: webserver is installed
+    package:
+      name: nginx
+      state: present
+    register: nginx_install_output
+  - name: print in terminal
+    debug:
+      var: nginx_install_output
+  
+  - name: copy the output
+    copy:
+      content: "{{ nginx_install_output }}"
+      dest: /tmp/task1-ouput
+
