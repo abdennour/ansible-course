@@ -2,3 +2,4 @@ ansibleuser*
 *.py
 _.yaml
 *assign*
+*.pem
