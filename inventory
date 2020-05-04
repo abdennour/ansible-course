@@ -4,9 +4,13 @@ container ansible_host=localhost ansible_private_key_file=./ansibleuser ansible_
 ######
 # ssh -i ohio-key.pem ubuntu@3.20.167.21
 dev1 ansible_host=3.22.184.68 ansible_ssh_user=ubuntu ansible_private_key_file=ohio-key.pem
-prod1 ansible_host=3.12.97.206 ansible_ssh_user=ubuntu ansible_private_key_file=ohio-key.pem
-prod2 ansible_host=3.20.167.21 ansible_ssh_user=ubuntu ansible_private_key_file=ohio-key.pem
+prod1 ansible_host=3.12.97.206 
+prod2 ansible_host=3.20.167.21
 
 [prod]
 prod1
 prod2
+
+[prod:vars]
+ansible_ssh_user=ubuntu
+ansible_private_key_file=ohio-key.pem

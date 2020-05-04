@@ -1,0 +1,8 @@
+- name: play - target group from large inventory
+  hosts: prod
+  become: yes
+  tasks:
+  - name: nginx is installed
+    package:
+      name: nginx
+      state: present
