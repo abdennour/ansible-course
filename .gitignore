@@ -3,3 +3,4 @@ ansibleuser*
 _.yaml
 *assign*
 *.pem
+*.tmp
