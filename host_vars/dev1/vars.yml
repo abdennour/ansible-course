@@ -1,0 +1,4 @@
+---
+ansible_host: 3.22.184.68
+ansible_ssh_user: ubuntu
+ansible_private_key_file: ohio-key.pem

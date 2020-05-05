@@ -3,7 +3,7 @@ ec2 ansible_host=18.222.140.103 ansible_private_key_file=./ansibleuser ansible_s
 container ansible_host=localhost ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser ansible_ssh_port=2525
 ######
 # ssh -i ohio-key.pem ubuntu@3.20.167.21
-dev1 ansible_host=3.22.184.68 ansible_ssh_user=ubuntu ansible_private_key_file=ohio-key.pem
+dev1
 prod1 ansible_host=3.12.97.206 
 prod2 ansible_host=3.20.167.21
 
@@ -13,9 +13,6 @@ dev1
 [prod]
 prod1
 prod2
-
-[dev:vars]
-git_branch=ansible-course
 
 [prod:vars]
 ansible_ssh_user=ubuntu
