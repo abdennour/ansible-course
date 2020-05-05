@@ -1,0 +1,26 @@
+
+- hosts: prod,dev
+  become: yes
+  vars:
+    webserver: nginx
+    webserver_root_dir: /var/www/html
+  tasks:
+  - name: webserver is installed
+    package:
+      name: "{{ webserver }}"
+      state: present
+  - name: webserver is up
+    service:
+      name: "{{ webserver }}"
+      state: started
+  - name: webserver root directory exists
+    file:
+      path: "{{ webserver_root_dir }}"
+      state: directory
+  - name: static website is deployed
+    uri:
+      url: https://raw.githubusercontent.com/abdennour/example-static-website/{{ git_branch }}/{{ item }}.html
+      dest: "{{ webserver_root_dir }}" # /usr/share/nginx/html
+    loop:
+    - index
+    - about
