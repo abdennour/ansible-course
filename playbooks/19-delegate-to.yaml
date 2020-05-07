@@ -1,0 +1,8 @@
+- name: play to show how to use delegate_to
+  hosts: dev1
+  tasks:
+  - name: string is copied into a file
+    copy:
+      content: This is a message while targeting {{ inventory_hostname }}
+      dest: /tmp/message.txt
+    delegate_to: localhost
