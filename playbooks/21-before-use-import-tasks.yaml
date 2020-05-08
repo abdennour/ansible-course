@@ -1,5 +1,5 @@
 
-- hosts: prod,dev
+- hosts: dev
   become: yes
   vars:
     webserver: nginx

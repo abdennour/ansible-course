@@ -1,0 +1,13 @@
+
+- hosts: dev
+  become: yes
+  vars:
+    webserver: nginx
+    webserver_root_dir: /var/www/html
+  tasks:
+  - name: import nginx install tasks
+    import_tasks: tasks/nginx-install.yaml
+  - name: static website is deployed
+    uri:
+      url: https://raw.githubusercontent.com/abdennour/example-static-website/{{ git_branch }}/index.html
+      dest: "{{ webserver_root_dir }}" # /usr/share/nginx/html
