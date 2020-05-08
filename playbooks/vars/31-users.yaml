@@ -1,0 +1,10 @@
+assignment_users:
+- name: ahmed
+  password: ahmed123
+  role: developer
+- name: mouath
+  password: mouath123
+  role: developer
+- name: ali
+  password: aliali123
+  role: ops

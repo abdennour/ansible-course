@@ -1,0 +1,36 @@
+# https://jinja.palletsprojects.com/en/2.11.x/templates/#builtin-filters
+- name: play with jinja2 filters
+  hosts: container
+  gather_facts: no
+  vars:
+    git_username: atoumi
+    git_password: Gfdfd445e
+    git_repos: ["eks-course", "ansible-course", "react-csv"]
+    course_lectures_nb: [6, 6, 10, 8, 9]
+  tasks:
+  - name: j2 filter - capitalize
+    debug:
+      msg: |
+        original : {{ git_username }}
+        with filter: {{ git_username | capitalize }}
+    # require: pip3 install passlib    
+  - name: j2 filter - password_hash('sha512')
+    debug:
+      msg: |
+        original : {{ git_password }}
+        with filter: {{ git_password | password_hash('sha512') }}
+  - name: j2 filter - length - nb of repos
+    debug:
+      msg: |
+        original : {{ git_repos }}
+        with filter: {{ git_repos | length }}
+  - name: j2 filter - sum - total nb of lectures
+    debug:
+      msg: |
+        original : {{ course_lectures_nb }}
+        with filter: {{ course_lectures_nb | sum }}
+  - name: j2 filter - max - max nb of lectures in a section
+    debug:
+      msg: |
+        original : {{ course_lectures_nb }}
+        with filter: {{ course_lectures_nb | max }}
