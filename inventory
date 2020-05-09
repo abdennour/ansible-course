@@ -1,10 +1,10 @@
-ec2 ansible_host=18.222.140.103 ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser webserver=tomcat
+# ec2 ansible_host=18.222.140.103 ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser webserver=tomcat
 # ssh -i ansibleuser ansibleuser@localhost -p 2525
 container ansible_host=localhost ansible_private_key_file=./ansibleuser ansible_ssh_user=ansibleuser ansible_ssh_port=2525
 ######
 # ssh -i ohio-key.pem ubuntu@3.20.167.21
 dev1
-prod1 ansible_host=3.12.97.206 
+prod1 ansible_host=3.12.97.206
 prod2 ansible_host=3.20.167.21
 
 [dev]
