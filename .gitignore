@@ -4,3 +4,6 @@ _.yaml
 *assign*
 *.pem
 *.tmp
+
+roles/*
+!roles/.gitkeep
