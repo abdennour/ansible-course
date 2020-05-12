@@ -9,3 +9,5 @@
 
 - src: geerlingguy.docker
   name: geerlingguy.docker
+- src: geerlingguy.kubernetes
+  name: geerlingguy.kubernetes

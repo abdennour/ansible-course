@@ -1,0 +1,13 @@
+master1 ansible_host=3.12.97.206 kubernetes_role=master
+node1 ansible_host=3.20.167.21 kubernetes_role=node
+node2 ansible_host=3.22.184.68 kubernetes_role=node
+
+[cluster]
+master1
+node1
+node2
+
+[cluster:vars]
+ansible_ssh_user=ec2-user
+ansible_private_key_file=ohio-key.pem
+

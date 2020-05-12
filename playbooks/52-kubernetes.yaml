@@ -1,0 +1,11 @@
+- name: play kubernets is up
+  hosts: cluster
+  become: yes
+  tasks:
+  - name: docker role
+    import_role:
+      name: geerlingguy.docker
+  - name: kubernetes role
+    import_role:
+      name: geerlingguy.kubernetes
+    
