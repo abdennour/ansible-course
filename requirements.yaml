@@ -6,3 +6,6 @@
  
 - src: geerlingguy.jenkins
   name: geerlingguy.jenkins
+
+- src: geerlingguy.docker
+  name: geerlingguy.docker

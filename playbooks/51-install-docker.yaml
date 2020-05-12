@@ -1,0 +1,9 @@
+- hosts: prod1,prod2,dev1
+  become: yes
+  tasks:
+  - name: docker is installed
+    import_role:
+      name: geerlingguy.docker
+    vars:
+      docker_users:
+      - "{{ ansible_ssh_user }}"
