@@ -7,3 +7,6 @@ _.yaml
 
 roles/*
 !roles/.gitkeep
+
+collections/*
+!collections/.gitkeep
