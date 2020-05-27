@@ -14,3 +14,7 @@ server4
 
 [postgres]
 server5
+
+[db:children]
+mysql
+postgres
