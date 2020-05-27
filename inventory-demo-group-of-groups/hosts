@@ -1,0 +1,16 @@
+server1
+server2
+server3
+server4
+server5
+
+[app]
+server1
+server2
+
+[mysql]
+server3
+server4
+
+[postgres]
+server5
